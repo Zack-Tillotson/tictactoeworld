@@ -1,8 +1,11 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga'
 
-// import boatSaga from '../boat/state/saga';
-const rootReducer = () => ({})
+import game from './App/Game/state/reducer';
+
+const rootReducer = combineReducers({
+  game,
+});
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

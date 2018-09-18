@@ -15,9 +15,14 @@ const config = {
       use: [{
         loader: 'babel-loader',
         options: {
-          presets: ['es2015', 'react'],
+          presets: ['es2015', 'react', 'stage-0'],
+          "plugins": [
+            ["transform-runtime"],
+            ["transform-class-properties", { "spec": true }]
+          ]
         },
       }],
+      exclude: /node_modules/,
     }, {
       test: /\.scss$/,
       use: [{
