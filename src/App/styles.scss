@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Typography */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+/* Colors */
+
+$background: rgb(230,240,240);
+$white: rgb(255,255,255);
+
+a:link, a:visited {
+  color: black;
+}
+
+/* Positioning */
+$padding: 1rem;
+
+body {
+  background: $background;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+}
+
+navigation {
+  background: $white;
+  flex: 0;
+  padding: $padding;
+  display: flex;
+  flex-flow: row nowrap;
+
+  .logo {
+    flex: 1;
+
+    img {
+      max-height: 1rem;
+    }
+  }
+
+  .link {
+    flex: 0;
+    font-size: .75rem;
+    line-height: 1rem;
+    margin: 0 1rem;
+  }
+}
+
+.root {
+  flex: 1;
+}

@@ -4,7 +4,7 @@ const config = {
   mode: 'development',
   stats: 'verbose',
   entry: {
-    app: './src/entry',
+    app: './src/client',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -30,11 +30,11 @@ const config = {
     }],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.scss'],
   },
   serve: {
-    content: './public',
-    port: 3000,
+    content: './dist',
+    port: 8888,
   },
 };
 
