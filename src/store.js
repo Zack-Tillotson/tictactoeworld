@@ -2,9 +2,11 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga'
 
 import game from './App/Game/state/reducer';
+import pwa from './InstallPwa/state/reducer';
 
 const rootReducer = combineReducers({
   game,
+  pwa,
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import App from './App';
+import registerSw from './registerSw';
+import installPwa from './InstallPwa/manager';
 
 ReactDom.hydrate( // hydrate
   <Provider store={store}>
@@ -12,3 +14,5 @@ ReactDom.hydrate( // hydrate
     </BrowserRouter>
   </Provider>
 , document.getElementById('root'));
+
+registerSw();
